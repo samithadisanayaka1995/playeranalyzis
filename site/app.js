@@ -318,7 +318,7 @@
         <div class="facts"><span><b>${esc(m.result)}</b></span><span>${dateStr(m.date)}</span><span>${esc(m.venue || "")}${m.city && !String(m.venue).includes(m.city) ? ", " + esc(m.city) : ""}</span>
         ${m.toss ? `<span>Toss: ${esc(m.toss.winner)} (${esc(m.toss.decision)})</span>` : ""}${m.pom.length ? `<span>Player of the match: <b>${m.pom.map((p) => plink(p)).join(", ")}</b></span>` : ""}</div></div></div>
       <div class="grid g2"><div>${video}</div>
-        <div class="panel pad"><h3>Playing XIs</h3><div class="grid g2" style="gap:10px">${m.teams.map((t) => `<div><b>${flag(t)} ${esc(t)}</b><div class="xi" style="columns:1">${(m.squads[t] || []).map((p) => `<a href="${D().players[p] ? "#/player/" + p : "javascript:void 0"}">${esc(name(p))}${D().players[p]?.keeper ? " †" : ""}</a>`).join("")}</div></div>`).join("")}</div></div></div>
+        <div class="panel pad"><h3>Playing XIs</h3><div class="grid" style="gap:10px;grid-template-columns:1fr 1fr">${m.teams.map((t) => `<div><b>${flag(t)} ${esc(t)}</b><div class="xi" style="columns:1">${(m.squads[t] || []).map((p) => `<a href="${D().players[p] ? "#/player/" + p : "javascript:void 0"}">${esc(name(p))}${D().players[p]?.keeper ? " †" : ""}</a>`).join("")}</div></div>`).join("")}</div></div></div>
       <div class="section-title"><h2>Innings</h2></div><div class="grid g2">${inns}</div>`;
   }
 
@@ -383,7 +383,7 @@
       <div class="panel pad" style="margin-top:14px">${swList(p.ins[f]?.bowl)}</div>
       <div class="grid g2" style="margin-top:14px">
         <div class="panel pad"><h3>How they take wickets</h3>${w.wkts ? bars(Object.entries(w.kinds).sort((x, y) => y[1] - x[1]).map(([k, v]) => ({ k: KIND_LABEL[k] || k, v: (100 * v) / w.wkts, base: bl.kinds?.[k], label: `${v} · ${Math.round((100 * v) / w.wkts)}%` })), { max: 100, unit: "%", mark: "Line = typical share across all " + f + " dismissals" }) : '<p class="muted small">No wickets in this period.</p>'}</div>
-        <div class="panel pad"><h3>Economy by phase</h3>${bars(phases.filter(([k]) => w.phase[k]).map(([k, label]) => ({ k: label.split(" (")[0], v: w.phase[k].econ, base: bl.bowlPhase?.[k]?.econ, red: w.phase[k].econ > (bl.bowlPhase?.[k]?.econ || 99), label: `${fmtN(w.phase[k].econ)} · ${w.phase[k].w}w` })), { mark: "Runs per over · line = typical" })}
+        <div class="panel pad"><h3>Economy by phase</h3>${bars(phases.filter(([k]) => w.phase[k]).map(([k, label]) => ({ k: label.split(" (")[0], v: w.phase[k].econ, base: bl.bowlPhase?.[k]?.econ, red: w.phase[k].econ > 1.08 * (bl.bowlPhase?.[k]?.econ || 99), label: `${fmtN(w.phase[k].econ)} · ${w.phase[k].w}w` })), { mark: "Runs per over · line = typical" })}
           <div class="legend">${phases.filter(([k]) => w.phase[k]).map(([k, label]) => `${label}: ${Math.floor(w.phase[k].b / 6)}.${w.phase[k].b % 6} ov, ${w.phase[k].r} runs, ${w.phase[k].w} wkts`).join(" · ")}</div></div>
         ${w.hand && (w.hand.L || w.hand.R) ? `<div class="panel pad"><h3>Right vs left-handers</h3>${bars(["R", "L"].filter((h) => w.hand[h]).map((h) => ({ k: h === "R" ? "vs Right-hand" : "vs Left-hand", v: w.hand[h].econ, label: `econ ${fmtN(w.hand[h].econ)} · ${w.hand[h].w}w` })), {})}</div>` : ""}
         ${w.victims.length ? `<div class="panel pad"><h3>Favourite victims</h3>${w.victims.map((x) => `<div class="kv"><span>${plink(x.p)}</span><span class="num">${x.o}× · ${x.r} runs / ${x.b} balls</span></div>`).join("")}</div>` : ""}

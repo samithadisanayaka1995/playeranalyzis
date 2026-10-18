@@ -126,7 +126,7 @@ td .sub { display: block; font-size: 12px; color: var(--ink-3); font-weight: 400
 .sw-item b { display: block; font-size: 14.5px; }
 .sw-item span { font-size: 13.5px; color: var(--ink-2); }
 .bars { display: grid; gap: 7px; }
-.bar { display: grid; grid-template-columns: 120px 1fr 74px; gap: 10px; align-items: center; font-size: 13.5px; }
+.bar { display: grid; grid-template-columns: 112px 1fr 104px; gap: 10px; align-items: center; font-size: 13.5px; }
 .bar .track { height: 12px; background: var(--panel-2); border-radius: 6px; overflow: hidden; position: relative; }
 .bar .fill { height: 100%; background: var(--pitch-2); border-radius: 6px; }
 .bar .fill.red { background: var(--ball); }
@@ -179,7 +179,7 @@ td .sub { display: block; font-size: 12px; color: var(--ink-3); font-weight: 400
   .search { flex: 1; }
   .search input { width: 100%; }
   h1 { font-size: 28px; }
-  .bar { grid-template-columns: 96px 1fr 60px; }
+  .bar { grid-template-columns: 90px 1fr 92px; }
   .match { grid-template-columns: 1fr auto; }
   .match .d { grid-column: 1 / -1; }
   .xi { columns: 1; }

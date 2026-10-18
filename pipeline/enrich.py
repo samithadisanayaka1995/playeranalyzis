@@ -123,7 +123,7 @@ def clean_wiki(v):
     v = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", v)
     v = re.sub(r"<br\s*/?>", " / ", v)
     v = re.sub(r"<[^>]+>", "", v).replace("'''", "").replace("''", "")
-    return re.sub(r"\s+", " ", v).strip(" ,;/")
+    return re.sub(r"\s+", " ", v).strip(" ,;/}")
 
 
 def infobox(wikitext):
