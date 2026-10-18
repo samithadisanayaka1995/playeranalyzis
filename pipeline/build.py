@@ -168,7 +168,7 @@ def style_type(bowl_style: str | None) -> str | None:
     s = bowl_style.lower()
     if any(k in s for k in ("fast", "medium", "seam")):
         return "pace"
-    if any(k in s for k in ("break", "spin", "orthodox", "googly", "chinaman", "wrist", "slow left")):
+    if any(k in s for k in ("break", "spin", "orthodox", "googly", "chinaman", "wrist", "slow")):
         return "spin"
     return None
 
@@ -270,7 +270,8 @@ def build(gender, matches, people, meta, highlights, keepers_manual):
                                     stumpers.add(pname(reg, fl["name"]))
     keepers = stumpers | keepers_manual
     for pid, mt in meta.items():
-        if "keeper" in (mt.get("role") or "").lower():
+        role = (mt.get("role") or "").lower()
+        if "keeper" in role and "occasional" not in role:
             keepers.add(pid)
 
     def ptype(pid):

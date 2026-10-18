@@ -33,7 +33,7 @@ jobs:
       - name: Build dataset from ball-by-ball data
         run: python pipeline/build.py --days "${{ github.event.inputs.days || '365' }}"
 
-      - name: Enrich (Cricinfo player styles, YouTube highlights)
+      - name: Enrich (player styles from Wikipedia, YouTube highlights)
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python pipeline/enrich.py --max-players 700 --max-videos 90

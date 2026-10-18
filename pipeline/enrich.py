@@ -129,10 +129,10 @@ def clean_wiki(v):
 def infobox(wikitext):
     out = {}
     for key, field in (("bat", "batting"), ("bowl", "bowling"), ("role", "role"), ("full", "fullname")):
-        m = re.search(r"\n\s*\|\s*" + field + r"\s*=\s*([^\n]*)", wikitext, re.I)
+        m = re.search(r"\n[ \t]*\|[ \t]*" + field + r"[ \t]*=[ \t]*([^\n]*)", wikitext, re.I)
         if m:
             val = clean_wiki(m.group(1))
-            if val:
+            if val and not val.startswith("|") and val.lower() not in ("none", "-", "—"):
                 out[key] = val[:80]
     if "bat" in out:
         b = out["bat"].lower()
