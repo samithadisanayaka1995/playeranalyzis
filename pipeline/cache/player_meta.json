@@ -67,6 +67,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"06659caa": {
+"bat": "Right hand Bat",
+"role": "Batter; occasional wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "06fc82b8": {
 "bat": "Right hand Bat",
 "bowl": "Right arm medium",
@@ -81,9 +87,27 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"07793daf": {
+"bat": "Left hand Bat",
+"bowl": "Slow left-arm orthodox",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"07b6c3c1": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "08548b13": {
 "bat": "Left hand Bat",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"09a58e2d": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -248,6 +272,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"130336c6": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "14661bf3": {
 "bat": "Left hand Bat",
 "bowl": "Left-arm wrist-spin",
@@ -309,6 +339,18 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"1a448be0": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm leg break",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"1aba45cd": {
+"bat": "Right hand Bat",
+"role": "Top-order batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "1b1c23bb": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
@@ -325,6 +367,18 @@
 },
 "1ba50005": {
 "err": "no wikipedia infobox",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"1c06d60a": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium-fast",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"1e1a8922": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium-fast",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -490,6 +544,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"28b61a48": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "28d6c44d": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast",
@@ -577,10 +637,22 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"2fa916b3": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium fast",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "3086f7a4": {
 "bat": "Left hand Bat",
 "bowl": "Slow left-arm orthodox",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"309feb16": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium-fast",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -595,6 +667,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"318a4039": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -616,6 +694,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
 "role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"321644de": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -675,10 +759,22 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"34304210": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "34b8cd68": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm leg break",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"3560a786": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -701,6 +797,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"36dfa62e": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium-fast",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "3708b522": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium-fast",
@@ -712,6 +814,12 @@
 "bat": "Left hand Bat",
 "bowl": "Right-arm off break",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"372455c4": {
+"bat": "Left hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -734,10 +842,22 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"3827f6a2": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "38b4583c": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"39086549": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -879,6 +999,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"41f534cd": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "420d4d31": {
 "err": "no wikipedia infobox",
 "src": "wikipedia",
@@ -995,6 +1121,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"4663bd23": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batsman",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "469eb822": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm offbreak",
@@ -1020,6 +1152,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium-fast",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"489aaf0a": {
+"bat": "Left hand Bat",
+"role": "Opening-Batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1092,6 +1230,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"4b31f3a3": {
+"bowl": "Right-arm fast-medium",
+"role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "4b51bd51": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
@@ -1103,6 +1247,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
 "role": "Middle-order batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"4b6f6b73": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm legbreak",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1162,6 +1312,30 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"4de0779a": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"4e017436": {
+"bat": "Right hand Bat",
+"role": "Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"4e6ef14f": {
+"bat": "Left hand Bat",
+"role": "Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"4eb02f2e": {
+"bat": "Left hand Bat",
+"bowl": "Right-arm off break, Slow left-arm orthodox",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "4ec96094": {
 "bat": "Right hand Bat",
 "bowl": "Slow left-arm orthodox",
@@ -1205,6 +1379,12 @@
 "52d1dbc8": {
 "bat": "Left hand Bat",
 "role": "Wicket-keeper-batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"53068b45": {
+"bat": "Left hand Bat",
+"bowl": "Right arm medium-fast",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1264,6 +1444,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"5691931a": {
+"bat": "Left hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "56b93d46": {
 "bat": "Right hand Bat",
 "role": "All-rounder",
@@ -1309,6 +1495,13 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm leg break",
 "role": "Batting All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"58c2fac4": {
+"bat": "Left hand Bat",
+"bowl": "Right-arm off break",
+"role": "Middle-order batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1368,6 +1561,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"5d095ee8": {
+"bat": "Left hand Bat",
+"role": "Batter, Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "5d1e7582": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm leg break",
@@ -1396,6 +1595,13 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"5ecfab18": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm off spin",
+"role": "Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "5f22ccae": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast-medium",
@@ -1415,6 +1621,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"5feead83": {
+"bat": "Right hand Bat",
+"bowl": "Right arm medium",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "6020a3c6": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
@@ -1431,6 +1643,12 @@
 },
 "60aa2db3": {
 "err": "no wikipedia infobox",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"60c250bf": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1527,6 +1745,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"6657b319": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1639,6 +1863,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"6e96c956": {
+"bat": "Right hand Bat",
+"role": "Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "6ee11109": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
@@ -1678,6 +1908,12 @@
 "bat": "Left hand Bat",
 "bowl": "Right-arm off break",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"712bbd92": {
+"bat": "Left hand Bat",
+"role": "Batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1727,6 +1963,12 @@
 "bat": "Left hand Bat",
 "bowl": "Right-arm off break",
 "role": "Batting-All rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"732f711b": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper Batsman",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1788,6 +2030,10 @@
 },
 "771b44ed": {
 "err": "no wikipedia infobox",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"77708937": {
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -1881,6 +2127,13 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"7e6e7274": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium",
+"role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "7ec9711d": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
@@ -1944,6 +2197,12 @@
 "bat": "Left hand Bat",
 "bowl": "Right-arm leg break",
 "role": "Opening batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"80fe764d": {
+"bat": "Left hand Bat",
+"role": "Opening Batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2013,6 +2272,18 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"84fdd3cf": {
+"bat": "Right hand Bat",
+"role": "Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"85021bcd": {
+"bat": "Left hand Bat",
+"bowl": "Right arm slow-medium",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "857b57ac": {
 "err": "no wikipedia infobox",
 "src": "wikipedia",
@@ -2058,10 +2329,28 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"86fdf668": {
+"bat": "Left hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "87e5a75b": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium-fast",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"88626ed2": {
+"bat": "Left hand Bat",
+"role": "Wicket-keeper-batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"88fece92": {
+"bat": "Left hand Bat",
+"role": "Opening batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2104,6 +2393,11 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"89f1d2d6": {
+"bat": "Left hand Bat",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2159,6 +2453,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"8d7fba79": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "8d92a2c3": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast",
@@ -2180,8 +2480,20 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"8e554b6b": {
+"bat": "Right hand Bat",
+"role": "Batsman",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "8eb2e2e6": {
 "err": "no wikipedia infobox",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"8ee36b18": {
+"bat": "Right hand Bat",
+"role": "Top-order batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2189,6 +2501,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast-medium",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"8f8f94fd": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2276,6 +2594,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"94268960": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "943ca0cd": {
 "bat": "Right hand Bat",
 "bowl": "Left-arm medium-fast",
@@ -2305,6 +2629,13 @@
 "t": "2026-10-18"
 },
 "95b5bda3": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium-fast",
+"role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"9656afbf": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium-fast",
 "role": "Bowler",
@@ -2353,6 +2684,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"989889ff": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper-batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "99258814": {
 "bat": "Left hand Bat",
 "bowl": "Right-Arm fast",
@@ -2364,6 +2701,13 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"99b75528": {
+"bat": "Right hand Bat",
+"bowl": "None}}",
+"role": "Wicket-keeper-batsman",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2432,6 +2776,30 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"9c2e3040": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"9c3d4e8a": {
+"bat": "Left hand Bat",
+"role": "Wicket-keeper batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"9c821d2e": {
+"bat": "Left hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"9c8448ba": {
+"bat": "Left hand Bat",
+"bowl": "Right arm off spin",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "9c9af282": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast",
@@ -2478,6 +2846,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"9e866b59": {
+"bat": "Right hand Bat",
+"role": "Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "9e9af5f2": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm fast-medium",
@@ -2499,6 +2873,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"9ff1e91e": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "9ffd1ac1": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
@@ -2510,6 +2890,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium fast",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"a0fdf513": {
+"bat": "Right hand Bat",
+"bowl": "Left arm medium",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2545,6 +2931,12 @@
 "bat": "Left hand Bat",
 "bowl": "Left-arm fast-medium",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"a2c23f31": {
+"bat": "Right hand Bat",
+"role": "Batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2611,6 +3003,13 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"a61bcb94": {
+"bat": "Left hand Bat",
+"bowl": "Slow left-arm orthodox",
+"role": "Allrounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "a6412417": {
 "bat": "Right hand Bat",
 "bowl": "Slow left-arm orthodox",
@@ -2627,6 +3026,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium-fast",
 "role": "All-rounder; Occasional wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"a811cb83": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm off break",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2689,6 +3094,12 @@
 "aad0c365": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium-fast",
+"role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"aaf037b1": {
+"bowl": "Right-arm leg break",
 "role": "All-rounder",
 "src": "wikipedia",
 "t": "2026-10-18"
@@ -2761,6 +3172,18 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"b05e45e4": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"b07c8cdc": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "b08252b8": {
 "bat": "Left hand Bat",
 "bowl": "Right-arm leg break",
@@ -2802,6 +3225,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"b2664905": {
+"bat": "Right hand Bat",
+"role": "Batter; occasional wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "b3a28446": {
 "bat": "Left hand Bat",
 "bowl": "Right-arm medium fast",
@@ -2820,6 +3249,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"b55fb828": {
+"bat": "Left hand Bat",
+"bowl": "Left arm orthodox",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -2872,6 +3307,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"bab78fa2": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "bafb9238": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm off-break",
@@ -2917,6 +3358,13 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"bbc192a4": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm off break",
+"role": "Bowling-all rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "bc773c4a": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
@@ -2948,6 +3396,12 @@
 "bat": "Left hand Bat",
 "bowl": "Right-arm medium",
 "role": "Bowling all-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"bd8689b0": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm off break",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3004,6 +3458,12 @@
 "bat": "Left hand Bat",
 "bowl": "Right-arm off-break",
 "role": "Batting all-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"c0dc015b": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3120,6 +3580,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"ca3ded6f": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "ca5acfa4": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
@@ -3155,6 +3621,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"cc17536f": {
+"bat": "Right hand Bat",
+"role": "Middle-order Batsman",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "cc23e91e": {
 "bat": "Right hand Bat",
 "bowl": "Slow left-arm orthodox",
@@ -3169,10 +3641,22 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"cca8bdca": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm off break",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "ccaa3434": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"cd56a813": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper Batter",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3243,6 +3727,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm off-spin",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"d2a2bb1a": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3400,6 +3890,12 @@
 "bat": "Right hand Bat",
 "bowl": "Left arm medium fast",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"dac6aabc": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3679,6 +4175,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"e8fa03ed": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "e94915e6": {
 "bat": "Left hand Bat",
 "bowl": "Left-arm medium-fast",
@@ -3753,6 +4255,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"ec691a5b": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "ecbcfef6": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
@@ -3771,6 +4279,13 @@
 "bat": "Left hand Bat",
 "bowl": "Leg-break",
 "role": "Opening batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"edf62a25": {
+"bat": "Left hand Bat",
+"bowl": "Left-arm medium",
+"role": "Bowler",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3808,10 +4323,22 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"f0b4294e": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm slow-medium",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "f0b4e47d": {
 "bat": "Right hand Bat",
 "bowl": "Right-arm leg break",
 "role": "Allrounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"f0f8f105": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3847,6 +4374,25 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm off break",
 "role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"f2665768": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm fast-medium",
+"role": "Bowler",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"f2670a3d": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper, Batter",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"f281dd00": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
@@ -3913,6 +4459,12 @@
 "src": "wikipedia",
 "t": "2026-10-18"
 },
+"f892fcf9": {
+"bat": "Right hand Bat",
+"bowl": "Right-arm medium-fast",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
 "f8e27d4a": {
 "bat": "Right hand Bat",
 "bowl": "Right arm medium",
@@ -3931,6 +4483,12 @@
 "bat": "Right hand Bat",
 "bowl": "Right-arm medium",
 "role": "All-rounder",
+"src": "wikipedia",
+"t": "2026-10-18"
+},
+"faef39c1": {
+"bat": "Right hand Bat",
+"role": "Wicket-keeper",
 "src": "wikipedia",
 "t": "2026-10-18"
 },
