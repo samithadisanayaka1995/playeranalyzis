@@ -302,7 +302,7 @@
   function viewMatch(id) {
     const m = D().matches[id];
     if (!m) { app.innerHTML = '<div class="empty">Match not found.</div>'; return; }
-    const video = m.hl
+    const video = m.hl && !window.__NO_EMBED__
       ? `<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${m.hl}" title="${esc(m.hlTitle || "Highlights")}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
       : `<a class="ytcard" href="${ytUrl(m)}" target="_blank" rel="noopener">${YT_ICON.replace('fill="currentColor"', 'fill="#ff2a1f"')}<div><b>Watch highlights on YouTube</b><span>Opens a search for “${esc(m.hlq)}”</span></div></a>`;
     const inns = m.inns.map((x, i) => {
