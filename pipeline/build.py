@@ -754,7 +754,25 @@ def insights(rec, f, bl, players, b, w, braw, wraw):
                     W.append(("Doesn't convert fifties", f"{b['f50']} fifties but no hundred in this period."))
         if b["ducks"] >= 3 and b["ducks"] / b["inns"] >= 0.2:
             W.append(("Frequent ducks", f"{b['ducks']} ducks in {b['inns']} innings."))
-        nem = [x for x in b["bowlers"] if x["o"] >= 2]
+        if outs >= 4:
+            top_kind, n_top = max(k.items(), key=lambda kv: kv[1])
+            titles = {t for t, _ in W}
+            covered = {"caught": "Caught in the field", "caught and bowled": "Caught in the field",
+                       "caught behind": "Edges behind the wicket", "bowled": "Attacked at the stumps",
+                       "lbw": "Attacked at the stumps", "stumped": "Stumped against spin", "run out": "Run-out risk"}
+            why = {
+                "caught": "usually off attacking or lofted shots — bowlers set deep fielders and tempt the big shot",
+                "caught and bowled": "often mistimed drives back to the bowler",
+                "caught behind": "edging balls in the channel outside off stump",
+                "bowled": "beaten by straight or full deliveries attacking the stumps",
+                "lbw": "trapped in front by full, straight balls or ones nipping back in",
+                "stumped": "drawn out of the crease, usually by spin",
+                "run out": "mix-ups while running between the wickets",
+            }
+            if covered.get(top_kind) not in titles and top_kind in why:
+                W.append((f"Usual dismissal: {top_kind}",
+                          f"{n_top} of {outs} dismissals ({100 * n_top / outs:.0f}%) — {why[top_kind]}."))
+        nem = [x for x in b["bowlers"] if x["o"] >= 3 or (x["o"] >= 2 and x["sr"] is not None and b["sr"] and x["sr"] < 0.8 * b["sr"])]
         if nem:
             x = nem[0]
             W.append(("Nemesis bowler",
@@ -839,8 +857,8 @@ def main():
     if os.path.exists(ovr_path):
         with open(ovr_path, encoding="utf-8") as fh:
             for row in csv.DictReader(fh):
-                pid = row.get("id")
-                if not pid:
+                pid = (row.get("id") or "").strip()
+                if not pid or pid.startswith("#"):
                     continue
                 d = meta.setdefault(pid, {})
                 for k in ("bat", "bowl", "role"):

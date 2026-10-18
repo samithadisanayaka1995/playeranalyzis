@@ -1,1 +1,42 @@
-<!doctype html><title>Cricket Player Analyzer</title><p>Building…</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cricket Player Analyzer</title>
+<meta name="description" content="Performance, strengths and weaknesses of international cricketers — Tests, ODIs and T20Is, men's and women's.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%23c0392b'/><path d='M7 9c5 4 5 10 0 14M25 9c-5 4-5 10 0 14' stroke='%23fff' stroke-width='1.6' fill='none' stroke-dasharray='2 1.6'/></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="#/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="var(--ball)"/><path d="M7 9c5 4 5 10 0 14M25 9c-5 4-5 10 0 14" stroke="#fff" stroke-width="1.6" fill="none" stroke-dasharray="2 1.6"/></svg>
+      <span>Player<b>Analyzer</b></span>
+    </a>
+    <div class="seg" id="genderSeg" role="tablist" aria-label="Men's or women's cricket">
+      <button data-g="male">Men</button><button data-g="female">Women</button>
+    </div>
+    <div class="seg" id="fmtSeg" role="tablist" aria-label="Format">
+      <button data-f="Test">Test</button><button data-f="ODI">ODI</button><button data-f="T20I">T20I</button>
+    </div>
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search players…" autocomplete="off"></label>
+  </div>
+  <nav class="tabs" id="tabs">
+    <a data-v="batters" href="#/batters">Batters</a>
+    <a data-v="bowlers" href="#/bowlers">Bowlers</a>
+    <a data-v="players" href="#/players">All players</a>
+    <a data-v="teams" href="#/teams">Countries</a>
+    <a data-v="matches" href="#/matches">Matches</a>
+  </nav>
+</header>
+<main id="app"><div class="loading">Loading match data…</div></main>
+<footer class="foot" id="foot"></footer>
+<script src="app.js"></script>
+</body>
+</html>

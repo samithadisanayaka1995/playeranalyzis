@@ -2,10 +2,11 @@
 """
 Enrichment step (run after build.py, then run build.py again):
 
-1. ESPNcricinfo player profiles -> batting hand, bowling style, playing role.
-   Needed for "vs pace / vs spin" and "vs left / right-handers" analysis.
-   Results are cached in pipeline/cache/player_meta.json, so each player is
-   fetched once. Polite rate limit; failures are retried after 14 days.
+1. Batting hand, bowling style and role from Wikipedia infoboxes, matched
+   exactly via the ESPNcricinfo player ID recorded in Wikidata (Cricinfo itself
+   blocks automated requests). Needed for "vs pace / vs spin" and "vs left / right-handers" analysis.
+   Cached in pipeline/cache/player_meta.json; misses are retried after 14 days.
+   Corrections go in pipeline/overrides/player_styles.csv.
 
 2. YouTube highlights -> one video per match, via the YouTube Data API v3.
    Only runs when the YOUTUBE_API_KEY environment variable is set (add it as a
@@ -29,8 +30,7 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "pipeline", "cache")
-UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+UA = "playeranalyzis/1.0 (https://github.com/samithadisanayaka1995/playeranalyzis; cricket stats app)"
 
 BAT = {"rhb": "Right hand Bat", "lhb": "Left hand Bat"}
 BOWL = {
@@ -62,7 +62,7 @@ def save(path, obj):
 
 
 def get(url, timeout=30):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en"})
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en", "Accept": "application/json, text/html"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode("utf-8", "replace")
 
@@ -112,37 +112,101 @@ def parse_cricinfo(page, ci):
     return out
 
 
+WD_SPARQL = "https://query.wikidata.org/sparql"
+WP_API = "https://en.wikipedia.org/w/api.php"
+
+
+def clean_wiki(v):
+    v = re.sub(r"<ref[^>]*/>|<ref.*?</ref>|<!--.*?-->", "", v, flags=re.S)
+    v = re.sub(r"\{\{(?:nowrap|small|nobr)\|([^{}]*)\}\}", r"\1", v, flags=re.I)
+    v = re.sub(r"\{\{[^{}]*\}\}", "", v)
+    v = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", v)
+    v = re.sub(r"<br\s*/?>", " / ", v)
+    v = re.sub(r"<[^>]+>", "", v).replace("'''", "").replace("''", "")
+    return re.sub(r"\s+", " ", v).strip(" ,;/")
+
+
+def infobox(wikitext):
+    out = {}
+    for key, field in (("bat", "batting"), ("bowl", "bowling"), ("role", "role"), ("full", "fullname")):
+        m = re.search(r"\n\s*\|\s*" + field + r"\s*=\s*([^\n]*)", wikitext, re.I)
+        if m:
+            val = clean_wiki(m.group(1))
+            if val:
+                out[key] = val[:80]
+    if "bat" in out:
+        b = out["bat"].lower()
+        out["bat"] = "Left hand Bat" if b.startswith("left") else "Right hand Bat" if b.startswith("right") else out["bat"]
+    if "bowl" in out:
+        out["bowl"] = out["bowl"][0].upper() + out["bowl"][1:]
+    if "role" in out:
+        out["role"] = out["role"][0].upper() + out["role"][1:]
+    return out
+
+
 def enrich_players(todo, meta, limit):
+    """Batting hand, bowling style and role from each player's Wikipedia infobox,
+    matched exactly through the ESPNcricinfo player ID stored in Wikidata (P2697)."""
     today = dt.date.today()
-    n = 0
+    want = {}
     for pid, p in todo["players"].items():
-        if n >= limit:
-            break
         cur = meta.get(pid)
         if cur and not cur.get("err"):
             continue
-        if cur and cur.get("err") and (today - dt.date.fromisoformat(cur["t"])).days < 14:
+        if cur and cur.get("err") and cur.get("src") == "wikipedia" and (today - dt.date.fromisoformat(cur["t"])).days < 14:
             continue
-        if not p.get("ci"):
-            continue
-        n += 1
-        url = f"https://www.espncricinfo.com/cricketers/{slug(p['name'])}-{p['ci']}"
+        if p.get("ci"):
+            want[str(p["ci"])] = pid
+        if len(want) >= limit:
+            break
+    if not want:
+        return 0
+    titles = {}
+    ids = list(want)
+    for i in range(0, len(ids), 150):
+        chunk = ids[i:i + 150]
+        q = ("SELECT ?ci ?article WHERE { VALUES ?ci { " + " ".join(f'"{c}"' for c in chunk) +
+             " } ?item wdt:P2697 ?ci . ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> . }")
+        url = WD_SPARQL + "?" + urllib.parse.urlencode({"query": q, "format": "json"})
         try:
-            info = parse_cricinfo(get(url), p["ci"])
-            if info:
-                info["t"] = today.isoformat()
-                meta[pid] = info
-                print(f"  ✓ {p['name']}: {info.get('bat')} / {info.get('bowl')}", file=sys.stderr)
-            else:
-                meta[pid] = {"err": "parse", "t": today.isoformat()}
+            res = json.loads(get(url, timeout=90))
         except Exception as e:
-            meta[pid] = {"err": str(e)[:80], "t": today.isoformat()}
-            print(f"  ✗ {p['name']}: {e}", file=sys.stderr)
-            if "403" in str(e) and n >= 5 and all(meta.get(k, {}).get("err") for k in list(todo["players"])[:n]):
-                print("  Cricinfo is blocking requests from this machine; stopping.", file=sys.stderr)
-                break
-        time.sleep(0.8)
-    return n
+            print(f"  Wikidata query failed: {e}", file=sys.stderr)
+            continue
+        for b in res["results"]["bindings"]:
+            t = urllib.parse.unquote(b["article"]["value"].rsplit("/wiki/", 1)[1]).replace("_", " ")
+            titles[t] = want[b["ci"]["value"]]
+        time.sleep(1)
+    print(f"  Wikipedia articles found for {len(titles)} of {len(want)} players", file=sys.stderr)
+    tl = list(titles)
+    for i in range(0, len(tl), 40):
+        chunk = tl[i:i + 40]
+        url = WP_API + "?" + urllib.parse.urlencode({
+            "action": "query", "prop": "revisions", "rvprop": "content", "rvslots": "main",
+            "format": "json", "formatversion": "2", "redirects": "1", "titles": "|".join(chunk)})
+        try:
+            res = json.loads(get(url, timeout=90))
+        except Exception as e:
+            print(f"  Wikipedia fetch failed: {e}", file=sys.stderr)
+            continue
+        redir = {r["to"]: r["from"] for r in res["query"].get("redirects", [])}
+        norm = {n["to"]: n["from"] for n in res["query"].get("normalized", [])}
+        for page in res["query"]["pages"]:
+            t = page.get("title")
+            src = redir.get(t, t)
+            src = norm.get(src, src)
+            pid = titles.get(src) or titles.get(t)
+            if not pid or "revisions" not in page:
+                continue
+            info = infobox(page["revisions"][0]["slots"]["main"]["content"])
+            info["t"] = today.isoformat()
+            info["src"] = "wikipedia"
+            meta[pid] = info
+        time.sleep(1)
+    for ci, pid in want.items():
+        if meta.get(pid, {}).get("src") != "wikipedia":
+            meta[pid] = {"err": "no wikipedia infobox", "src": "wikipedia", "t": today.isoformat()}
+    return len(want)
 
 
 def team_hit(title, team):
