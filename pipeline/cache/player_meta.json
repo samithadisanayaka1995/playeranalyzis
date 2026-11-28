@@ -4272,9 +4272,11 @@
 "t": "2026-10-18"
 },
 "e4bf3570": {
-"err": "no wikipedia infobox",
+"bat": "Left hand Bat",
+"bowl": "Right-arm off-break",
+"role": "Batsman",
 "src": "wikipedia",
-"t": "2026-10-18"
+"t": "2026-11-28"
 },
 "e4ff6a62": {
 "err": "no wikipedia infobox",
